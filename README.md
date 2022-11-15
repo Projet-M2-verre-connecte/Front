@@ -1,5 +1,11 @@
 # Front
 
+# Intallation :
+
+1) installer xamp
+2) cloner le repo front dans le fichier "C:/xampp/htdocs/"
+(dans l'exemple décrit ci-dessous le projet a été cloné dans le fichier "C:/xampp/htdocs/projet/projet_TMS/Front")
+
 # Configuration de Xampp pour l'environnement local :
 
 1) aller dans le répertoire : C:\xampp\apache\conf\extra
@@ -11,11 +17,12 @@
     DocumentRoot "C:/xampp/htdocs/projet/projet_TMS/Front"
 </VirtualHost>
 ```
-/!\ attention le path décrit est un exemple /!\
+/!\ attention le path décrit pour le DocumentRoot est un exemple, si vous en utilisez un autre, modifiez cette partie /!\\
 le path à écrire commencera forcément par : "C:/xampp/htdocs/" + l'arborescence de projet cloné sur votre machine
 
 3) ouvrir bloc note en tant qu'administrateur
-4) ouvrir le fichier "C:\Windows\System32\drivers\etc\.hosts", et copier coller le texte ci-dessous :
+4) ouvrir le fichier "C:/Windows/System32/drivers/etc/.hosts", et copier coller le texte ci-dessous :
 ```
 127.0.0.1	prj-tms-web-front.fr
 ```
+/!\ attention, veuillez selectionner "tout type de fichier .\* " /!\\
