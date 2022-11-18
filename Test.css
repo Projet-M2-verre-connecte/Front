@@ -1,0 +1,51 @@
+#EnTete
+{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:space-around;
+}
+
+.element:nthchild(2)
+{
+    flex:1;
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size: 100px;
+    background: -webkit-linear-gradient(rgb(122, 139, 234), rgb(3, 217, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.encadrer-un-contenu{ 
+    border: 1px solid black; 
+    padding: 40px; 
+    justify-content: center;
+}
+
+#Data
+{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:nowrap;
+    justify-content:space-around;
+}
+
+#Verre
+{
+    border: 1px solid black; 
+    padding: 40px; 
+    justify-content: center;
+}
+
+#Graphique
+{
+    border: 1px solid black; 
+    padding: 40px; 
+    justify-content: center;
+}
+
+
+
