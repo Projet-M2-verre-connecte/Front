@@ -5,3 +5,12 @@
 .backgroundColor2{
     background-color: #12255B
 }
+
+.Apropos{
+    width: 100px; 
+    background-color: white;
+    border:#3A6BB7 ;
+    border-radius: 30px;
+    width:12% !important;
+    height: 30px;
+}
