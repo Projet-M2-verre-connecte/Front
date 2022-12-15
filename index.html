@@ -30,27 +30,67 @@
             </div>
         </div>         
     </div>
-    <div id="infoPatient">
-        <div id="identite">
-
+    <div id="nomPatient"  class="pt-2 ms-5" style="margin-top: 80px; background-color: #12255B; border-style: solid; border-color: #12255B ; width: 300px;  border-radius: 60px; color:aliceblue">
+        <p class="identity" style="padding-left: 40px"><strong> Madame PICHON Jeannine </strong></p>
+    </div>
+    <div id="infosPatient"  class="p-2 ms-4 me-4 mt-3" style="background-color: #12255B; border-style: solid; border-color: #12255B ; border-radius: 60px; color:aliceblue">
+        <p id="birth" class="ps-4" style="display:inline"> Date de naissance : 02/04/1944 </p>  <p id="weight" class="ps-5" style="display:inline">Poids: 70kg </p> 
+        <button type="button" id="modifPatient" class="position-relative start-45 btn btn-light mb-2" style="margin-left:1000px;border-radius: 60px; background-color: #99AEE9" ><i class="bi bi-person-gear" style="color:white"></i></button><br>
+        <p id="Age" class="ps-4"  style="display:inline">Age: 77 ans  </p>  <p id="Aim" class="ps-5"  style="display:inline">Quantite d'eau a boire: 2L/jours  </p>
+    </div>
+    <div id="data" class="me-4 ms-4" style="margin-top: 3em;">
+        <div class="progress mb-3 border-bottom border-top border-start " style="margin:auto; --bs-progress-bg: #3A6BB7 !important; border-width: 4px !important; border-color: white !important; height: 200px; width: 200px; transform: rotate(-90deg);"  >
+            <div class="progress-bar w-50" style="background-color: #12255B; --bs-gutter-x: 0rem !important;" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
         </div>
-        <div id="infos">
-
-        </div>
-        <div id="modifierData">
-
+        <div id="graphe" style="width:345px;">
+            <div id="graphique" style="background-color: white;"><canvas id="myChart" ></canvas></div>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+            <script>
+                const ctx = document.getElementById('myChart');
+        
+                new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'],
+                        datasets: [{
+                            label: "Consommation d'eau",
+                            data: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0, 0.2],
+                            borderWidth: 2,
+                            backgroundColor:'#3A6BB7',
+                            borderColor:'#12255B',
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            backgroundColor:'white',
+                            y: {
+                                beginAtZero: true,
+                            }
+                        }
+                    }
+                });
+            </script>
+            <div id="Bouton_JSM" class="d-grid gap-2 d-md-block">
+                <button class="button" type="button">Jours</button>
+                <button class="button" type="button">Semaine</button>
+                <button class="button" type="button">Mois</button>
+            </div>
         </div>
     </div>
-    <div id="data">
-        <div id="verre">
-
-        </div>
-        <div id="graphe">
-
-        </div>
+    <div id='alert' style="margin-top: 2em; width: 30em; background-color: red; box-shadow: 2px 2px 2px black; padding: 8px 12px; margin-left: auto ; margin-right: auto;border-radius: 30px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16" style="color:white">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+          </svg>
+        <span style="align-self : center; text-align: center; transform: translateY(+50%); color: white; font-size: 20px">
+            Votre hydratation est mauvaise. Buvez de l'eau.
+        </span>
     </div>
-    <div id="alerts">
-
+    <div id='green_alert' style="display:none;width: 18em; background-color: green; box-shadow: 2px 2px 2px black; padding: 8px 12px; margin: auto; border-radius: 30px">
+        <span style="align-self : center; text-align: center; transform: translateY(+50%); color: white; font-size: 20px">
+            Votre hydratation est bonne !
+        </span>
     </div>
     <footer>
 
