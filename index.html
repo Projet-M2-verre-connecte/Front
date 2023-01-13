@@ -2,6 +2,7 @@
 <html style="height:100%">
 <head>
 <link rel="stylesheet" href="index.css">
+<meta charset="UTF-8">
 <script src="index.js"></script>
 <script type="text/javascript"
         src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -20,12 +21,12 @@
         <div class="row" style="display:flex;height:100%;justify-content: space-between;">
             <div style="height:100%;width: 40%;display: flex;">
                 <div id="logo">
-                    <div id="rond" style="margin-top: 5%; margin-left: 5%; height:100px;width: 100px; background: white; clip-path:ellipse(50% 50%);"><img src="glouUprogne.png" style="height:100%"></div>
+                    <div id="rond" onclick="accueil()" style="margin-top: 5%; margin-left: 5%; height:100px;width: 100px; background: white; clip-path:ellipse(50% 50%);"><img src="glouUprogne.png" style="height:100%"></div>
                 </div>
                 <div style="display:flex;justify-content: center;margin-left: 1em;width: 50%;">
-                    <button id="Apropos" class="Apropos" style="margin-top: 40px;width: 100% !important;/* justify-content: left; *//* display: flex; */">A propos</button>
-                    <button id="deco" class="Apropos" style="margin-left: 10px;margin-top: 40px;width: 100% !important;">
-                        <i class="bi bi-power" style="justify-content: left; display: flex;width: 16px; align-items: center; font-style:normal">Deconnexion</i> 
+                    <button onclick="aPropos()" id="Apropos" class="Apropos" style="margin-top: 40px;width: 100% !important;/* justify-content: left; *//* display: flex; */">A propos</button>
+                    <button onclick="deconnexion()" id="deco" class="Apropos" style="margin-left: 10px;margin-top: 40px;width: 100% !important;">
+                        <i class="bi bi-power" style="justify-content: left; display: flex;width: 16px; align-items: center; font-style:normal">Déconnexion</i> 
                     </button>
                 </div>
             </div>
@@ -44,7 +45,8 @@
         </div>
         <div id="infosPatient"  class="p-2 ms-4 me-4 mt-3" style="background-color: #12255B; border-style: solid; border-color: #12255B ; border-radius: 60px; color:aliceblue">
             <p id="birth" class="ps-4" style="display:inline"> Date de naissance : 02/04/1944 </p>  <p id="weight" class="ps-5" style="display:inline">Poids: 70kg </p> 
-            <button type="button" id="modifPatient" class="position-relative start-45 btn btn-light mb-2" style="margin-left:1000px;border-radius: 60px; background-color: #99AEE9" ><i class="bi bi-person-gear" style="color:white"></i></button><br>
+            <button onclick="modifProfil()" type="button" id="modifPatient" class="position-relative start-45 btn btn-light mb-2" style="margin-left:1000px;border-radius: 60px; background-color: #99AEE9" ><i class="bi bi-person-gear" style="color:white"></i></button><br>
+                                  
             <p id="Age" class="ps-4"  style="display:inline">Age: 77 ans  </p>  <p id="Aim" class="ps-5"  style="display:inline">Quantite d'eau a boire: 2L/jours  </p>
         </div>
         <div id="data" class="me-4 ms-4" style="margin-top: 3em;">
@@ -100,7 +102,8 @@
             </span>
         </div>
     </div>
-    <div id="modale" style="display:none;">
+
+    <div id="info_utilisateur" class="display">
         <div>
             <p class="infoUtil">INFORMATIONS UTILISATEUR</p>
         </div>
@@ -133,15 +136,82 @@
                     <input placeholder="XX" type="text" name="quantity" id="quantityModif" required>
                     <i>L</i>
                 </div>
-                <div class="padding" style="justify-content: center;display: flex;">
-                    <button id="validInfo" class="validInfo" style="justify-content:center;">Valider</button>
+                <div class="padding" style="justify-content: space-around;display: flex;">
+                    <button onclick="validProfil()" id="validInfo" class="validInfo" style="justify-content:center;">Valider</button>
+                    <button onclick="cancelProfil()" id="cancelInfo" class="validInfo" style="justify-content:center;">Annuler</button>
                 </div>
             </div>
-            
         </div>
           
         
-      </div>
+    </div>
+
+    <div id="AproposModale" class="display">
+        <h1 class="TitleAPropos"> A PROPOS </h1>
+        <div class="TitleProject" >
+            <p class="TitleText"><strong> Le projet </strong></p>
+        </div>
+        <div class= "mainText">
+            <p>La déshydratation est un problème récurrent, particulièrement chez les personnes âgées. En effet, la sensation de soif diminue avec l’âge.  </p>
+            <p><strong> Glou Up</strong>,  c’est un projet réalisé par un groupe d’étudiants en dernière année à l’ISEN Brest. </p>
+            <p><strong> Le but ? </strong>    Les problèmes liés à la déshydratation sont nombreux et peuvent s’avérer grave chez les patients les plus âgés. Plusieurs facteurs en sont la cause : maladies, médicaments, diminution de la soif, ... </p>
+            <p>Notre objectif est de soulager l’entourage, notamment le personnel soignant, dans le suivi de l’hydratation des patients et éviter des passages réguliers. Ce verre pourrait être particulièrement pratique en temps de canicule, et permettrait également de rassurer les proches des patients quant à ce phénomène. </p>
+            <p><strong> Le concept ? </strong>     Un verre posé sur un socle qui mesure la quantité d’eau bue. Le dispositif est connecté à une application Web, qui va permettre de visualiser la quantité d’eau à boire par jour, calculée de façon personnalisée pour chaque utilisateur du Glou Up, ainsi que la quantité d’eau bue.</p>
+        </div>
+        <div class="TitleTeam">
+            <p class="TitleText"><strong> L'équipe </strong></p>
+        </div>
+        <div class="TextTeam">
+            <p>L’équipe Glou Up, ce sont 25 étudiants dans le domaine professionnel Technologies Médicales et Santé,  accompagnés par leur professeur responsable  M. Thibault Napoléon.</p>
+        </div>
+        <div class="Pictures">
+            <div class="Team1"> 
+                <img src="equipe.jpg" width="175px" height="160px" >
+                <div class="TeamDesign"><p class="TextTeamDesign"><strong>L'équipe "Design"</strong></p></div>
+            </div>
+            <div class="Team2">
+                <img src="equipe.jpg" width="175px" height="160px" >
+                <div class="TeamHardware"><p class="TextTeamHardware"><strong>L'équipe "Hardware"</strong></p></div>
+            </div>
+            <div class="Team3">
+                <img src="equipe.jpg" width="175px" height="160px">
+                <div class="TeamGestion"><p class="TextTeamGestion"><strong>L'équipe "Gestion"</strong></p></div>
+            </div>
+            <div class="Team4">
+                <img src="equipe.jpg" width="175px" height="160px" > 
+                <div class="TeamSoftware"><p class="TextTeamSoftware"><strong>L'équipe "Software"</strong></p></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="connexion" style="display: flex; flex-direction: column; justify-content: center; background-color:#3A6BB7; text-align:center; height: 100%;" class="display">
+        <div class="box box1" id="logo" style="display:flex; justify-content:center" >
+            <div id="rond" style="margin: auto; height:200px; width: 200px; background: white; clip-path:ellipse(50% 50%);"><img src="glouUprogne.png" style="height:100%">
+            </div>
+        </div>
+        <br>
+        <div class="box box2" id="user" style="margin-right:40%; margin-left:40%"><div class="input-group mb-3" style="border-radius:50px">
+            <input style="text-align:center; border-radius:50px" type="text" class="form-control" placeholder="Identifiant" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <div class="box box3" id="mdp" style="margin-right:40%; margin-left:40%">
+            <div class="input-group mb-3">
+                <input  style="text-align:center; border-radius:50px" type="password" class="form-control" placeholder="Mot de passe" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+        </div>
+        <br>
+        <div>
+            <button type="button" style="background-color:#12255B; color:white; border-radius:50px">Se connecter</button>
+        </div>
+        <br>
+        <div id="erreur" style="margin-right:30%; margin-left:30%">
+            <div class="alert alert-danger" role="alert" style="border-radius:50px; border-color:tomato; border-width:3px" >
+                <p>Identifiant et/ou mot de passe incorrects.</p>
+                <!--<a href="#" class="close" data-dismiss="alert" aria-label="close>&times;</a>"-->  
+            </div>  
+        </div>
+    </div>
+
     <footer>
 
     </footer>
