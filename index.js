@@ -39,4 +39,5 @@ function deconnexion(){
     document.getElementById("AproposModale").classList.add("display"); 
     document.getElementById("page").classList.add("display"); 
     document.getElementById("enTete").classList.add("display"); 
+    document.getElementById("footer").classList.add("display"); 
 }

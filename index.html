@@ -184,36 +184,70 @@
         </div>
     </div>
 
-    <div id="connexion" style="display: flex; flex-direction: column; justify-content: center; background-color:#3A6BB7; text-align:center; height: 100%;" class="display">
-        <div class="box box1" id="logo" style="display:flex; justify-content:center" >
-            <div id="rond" style="margin: auto; height:200px; width: 200px; background: white; clip-path:ellipse(50% 50%);"><img src="glouUprogne.png" style="height:100%">
+    <div id="connexion" style="height:100%" class="display">
+        <div style="display:flex; flex-direction: column; justify-content: center; background-color:#3A6BB7; text-align:center; height: 100%;" >
+            <div class="box box1" id="logo" style="display:flex; justify-content:center" >
+                <div id="rond" style="margin: auto; height:200px; width: 200px; background: white; clip-path:ellipse(50% 50%);"><img src="glouUprogne.png" style="height:100%">
+                </div>
             </div>
-        </div>
-        <br>
-        <div class="box box2" id="user" style="margin-right:40%; margin-left:40%"><div class="input-group mb-3" style="border-radius:50px">
-            <input style="text-align:center; border-radius:50px" type="text" class="form-control" placeholder="Identifiant" aria-label="Username" aria-describedby="basic-addon1">
+            <br>
+            <div class="box box2" id="user" style="margin-right:40%; margin-left:40%"><div class="input-group mb-3" style="border-radius:50px">
+                <input style="text-align:center; border-radius:50px" type="text" class="form-control" placeholder="Identifiant" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
             </div>
-        </div>
-        <div class="box box3" id="mdp" style="margin-right:40%; margin-left:40%">
-            <div class="input-group mb-3">
-                <input  style="text-align:center; border-radius:50px" type="password" class="form-control" placeholder="Mot de passe" aria-label="Username" aria-describedby="basic-addon1">
+            <div class="box box3" id="mdp" style="margin-right:40%; margin-left:40%">
+                <div class="input-group mb-3">
+                    <input  style="text-align:center; border-radius:50px" type="password" class="form-control" placeholder="Mot de passe" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
             </div>
-        </div>
-        <br>
-        <div>
-            <button type="button" style="background-color:#12255B; color:white; border-radius:50px">Se connecter</button>
-        </div>
-        <br>
-        <div id="erreur" style="margin-right:30%; margin-left:30%">
-            <div class="alert alert-danger" role="alert" style="border-radius:50px; border-color:tomato; border-width:3px" >
-                <p>Identifiant et/ou mot de passe incorrects.</p>
-                <!--<a href="#" class="close" data-dismiss="alert" aria-label="close>&times;</a>"-->  
-            </div>  
+            <br>
+            <div>
+                <button type="button" style="background-color:#12255B; color:white; border-radius:50px">Se connecter</button>
+            </div>
+            <br>
+            <div id="erreur" style="margin-right:30%; margin-left:30%">
+                <div class="alert alert-danger" role="alert" style="border-radius:50px; border-color:tomato; border-width:3px" >
+                    <p>Identifiant et/ou mot de passe incorrects.</p>
+                    <!--<a href="#" class="close" data-dismiss="alert" aria-label="close>&times;</a>"-->  
+                </div>  
+            </div>
         </div>
     </div>
 
-    <footer>
-
+    <footer id="footer" style="margin-top:1em;">
+        <div>
+            <div class="row">
+                <div style="height:20px">
+                </div>
+                <div class="footer-col-rt col-md-6">
+                    <div id="logo_footer" class="col-4" style="height:100%">
+                        <div id="rond" style="margin-left:250%; height:100px;width: 100px; background: white; clip-path:ellipse(50% 50%);"><img src="glouUprogne.png" style="height:100%"></div>
+                    </div>
+                </div>
+                <div class="footer-col-lf col-md-6">
+                    <i width="16" height="16" fill="white" class="bi bi-geo-alt" viewBox="0 0 16 16"></i>
+                    <span style="align-self : center; text-align: center; transform: translateY(+50%); color: white; font-size: 17px;">
+                    20 rue Cuirasse Bretagne
+                    </span>
+                    <div>
+                        <span style="align-self : center; text-align: center; transform: translateY(+50%); color: white; font-size: 17px; margin-left:20px">
+                            29200 BREST
+                        </span>
+                    </div>
+                    <div>
+                        <i width="16" height="16" fill="white" class="bi bi-telephone" viewBox="0 0 16 16"></i> 
+                        <span style="align-self : center; text-align: center; transform: translateY(+50%); color: white; font-size: 17px;">
+                            Tél: 02.98.03.84.00
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <div style="color : white; text-align: center">
+                        <a>&copy; 2022</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
