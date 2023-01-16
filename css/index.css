@@ -101,10 +101,11 @@ header{
     background-color: #12255B;
     border-style: solid;
     border-color: #12255B;
-    width: 600px; 
+    width: auto; 
     border-radius: 60px;
     color:aliceblue;
     margin-left:10%;
+    margin-right:10%;
     padding-top:1%;
     padding-bottom:1%;
 }
@@ -131,8 +132,10 @@ header{
 }
 
 #modifPatient{
-    border-radius: 60px; 
-    background-color: #99AEE9;  
+    margin-top: -8%;
+    border-radius: 50px; 
+    background-color: #99AEE9;
+    margin-left:90%;
 }
 
 #bouton_modif{
@@ -156,6 +159,7 @@ header{
     align-items: center;
     flex-grow:1;
     justify-content:space-around;
+    margin-top: 3em;
 }
 
 svg{
@@ -203,9 +207,28 @@ svg{
     --bs-gutter-x: 0rem !important;
 }
 
+#verre{
+    text-align: center;
+}
+
+.mot{
+    color: white;
+    font-weight: bold;
+}
+
+.mot2{
+    border-radius: 20px;
+    background-color: white;
+    width: 100%;
+    font-weight: bold;
+    color: #12255B;
+    font-size: x-large;
+
+}
+
 #graphe{
     display:grid;
-    width:auto;
+    width:400px;
     grid-template-rows: 80% 20%;
     grid-template-columns: 100%;
     grid-row-gap: 5%;
@@ -230,7 +253,7 @@ svg{
 .button{
     border-radius: 30px;
     border-color:#12255B ;
-    width: 120%;
+    width: 150%;
     background-color: white;
     font-weight: bold;
     color:#12255B ;
@@ -239,6 +262,10 @@ svg{
 #btn{
     margin-top:10px; 
     margin-bottom:10px;
+}
+
+.bbox1{
+    margin-right: 5%;
 }
 
 .button:hover{
@@ -417,21 +444,35 @@ i {
     background-color: #12255B;
 }
 
-.box1{
-    text-align: center;
+#ligne1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-#blockrond{
-    display:flex; 
-    justify-content:center;
+
+.colonne1{
+    width:40%;
 }
+
+.colonne2{
+    width:40%;
+}
+
 
 #rond_footer{
     margin-top: 2%;
-    margin-bottom: 1%;
     height:100px;
     width: 100px; 
     background: white; 
-    clip-path:ellipse(50% 50%); 
+    clip-path:ellipse(50% 50%);
+    margin-left: auto; 
+}
+
+
+.box1{
+    text-align: left;
+    margin-left: 5%;
 }
 
 #adress{
