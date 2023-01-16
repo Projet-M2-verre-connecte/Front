@@ -57,30 +57,6 @@
             <div id="graphe" style="width:345px;">
                 <div id="graphique" style="background-color: white;"><canvas id="myChart" ></canvas></div>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-            
-                <script>
-                    const ctx = document.getElementById('myChart');
-            
-                    new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23'],
-                            datasets: [{
-                                label: "Consommation d'eau",
-                                data: [0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0, 0, 0.2],
-                                backgroundColor:'#12255B',
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                backgroundColor:'white',
-                                y: {
-                                    beginAtZero: true,
-                                }
-                            }
-                        }
-                    });
-                </script>
                 <div id="Bouton_JSM" class="d-grid gap-2 d-md-block">
                     <button class="button" type="button">Jours</button>
                     <button class="button" type="button">Semaine</button>
