@@ -1,6 +1,6 @@
 'use strict';
 
-ajaxRequest('GET', 'prj-TMS-web-back-api.fr/database.php/select_patients', DisplayUsers);
+ajaxRequest('GET', 'prj-TMS-web-back-api.fr/php/database.php/select_patient?', DisplayUsers);
 
 function DisplayUsers(patients){
     for(let i = 0; i < patients.length; i++)

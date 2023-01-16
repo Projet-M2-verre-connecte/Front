@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html style="height:100%">
+<html>
     <head>
         <link rel="stylesheet" href="css/Connexion.css">
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
@@ -10,34 +10,34 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <title>Connexion</title>
     </head>
-    <body style="background-color:#3A6BB7; text-align:center">
+    <body class="background">
         <div id="Page">
             <br>
             <br>
-            <div class="box box1" id="logo" style="display:flex; justify-content:center" >
-                <div id="rond" style="margin: auto; height:200px; width: 200px; background: white; clip-path:ellipse(50% 50%);"><img src="img/glouUprogne.png" style="height:100%"></div>
+            <div class="box box1" id="logo">
+                <div id="rond"><img src="img/glouUprogne.png" id="rond2"></div>
                 </div>
             </div>
             <br>
-            <div class="box box2" id="user" style="margin-right:40%; margin-left:40%"><div class="input-group mb-3" style="border-radius:50px">
-                <input style="text-align:center; border-radius:50px" type="text" class="form-control" placeholder="Identifiant" aria-label="Username" aria-describedby="basic-addon1">
+            <div class="box box2" id="user">
+                <div class="input-group mb-3">
+                <input id="incon" type="text" class="form-control" placeholder="Identifiant" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
-            <div class="box box3" id="mdp" style="margin-right:40%; margin-left:40%">
+            <div class="box box3" id="mdp">
                 <div class="input-group mb-3">
-                    <input  style="text-align:center; border-radius:50px" type="password" class="form-control" placeholder="Mot de passe" aria-label="Username" aria-describedby="basic-addon1">
+                    <input id="entermdp" type="password" class="form-control" placeholder="Mot de passe" aria-label="Username" aria-describedby="basic-addon1">
                 </div>
             </div>
         </div>
         <br>
         <div id="connexion">
-            <button type="button" style="background-color:#12255B; color:white; border-radius:50px">Se connecter</button>
+            <button id="btnconnect" type="button">Se connecter</button>
         </div>
         <br>
-        <div id="erreur" style="margin-right:30%; margin-left:30%">
-            <div class="alert alert-danger" role="alert" style="border-radius:50px; border-color:tomato; border-width:3px" >
+        <div id="erreur" class="display">
+            <div id="alert" class="alert alert-danger" role="alert">
                 <p>Identifiant et/ou mot de passe incorrects.</p>
-                <!--<a href="#" class="close" data-dismiss="alert" aria-label="close>&times;</a>"-->  
             </div>  
         </div>
     </body>
