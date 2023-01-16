@@ -17,8 +17,8 @@ footer{
     background-color:#12255B ;
     color: white;
     font-size: small;
+    margin-top:3%;
 }
-
 #data{
     display: grid;
     grid-template-rows: 100%;
@@ -55,6 +55,24 @@ footer{
 .button:hover{
     background-color: #12255B;
     color: white;
+}
+
+.mot{
+    color: white;
+    margin-left: 19%;
+    margin-top: -1%;
+}
+
+.mot2{
+    border-radius: 20px;
+    width: 14%;
+    border:none;
+    background-color: white;
+    font-weight: bold;
+    color:#12255B ;
+    margin-left: 19%;
+    margin-top: -20%;
+    font-size:x-large;
 }
 
 .infoUtil {
