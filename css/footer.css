@@ -1,0 +1,70 @@
+#footer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.background{
+    background-color: #12255B;
+}
+
+#ligne1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.colonne1{
+    width:40%;
+}
+
+.colonne2{
+    width:40%;
+}
+
+
+#rond_footer{
+    margin-top: 2%;
+    height:100px;
+    width: 100px; 
+    background: white; 
+    clip-path:ellipse(50% 50%);
+    margin-left: auto; 
+}
+
+
+.box1{
+    text-align: left;
+    margin-left: 5%;
+}
+
+#adress{
+    align-self : center; 
+    text-align: center; 
+    transform: translateY(+50%); 
+    color: white; 
+    font-size: 17px;
+}
+
+#cp{
+    align-self : center; 
+    text-align: center; 
+    transform: translateY(+50%); 
+    color: white; 
+    font-size: 17px; 
+    margin-left:20px;
+}
+
+#tel{
+   align-self : center; 
+   text-align: center; 
+   transform: translateY(+50%); 
+   color: white; 
+   font-size: 17px;
+}
+
+#year{
+    color : white; 
+    text-align: center;
+}

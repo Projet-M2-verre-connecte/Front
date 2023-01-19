@@ -1,39 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="css/index.css">
-        <meta charset="UTF-8">
-        <script src="js/index.js"></script>
-        <script type="text/javascript"
-                src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
-        <title>GlouUp</title>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <script src="js/index.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <title>GlouUp</title>
+    <script src ="https://unpkg.com/htmlincludejs"></script>
     </head>
 
-    <body class="backgroundcolore">
-
-        <header id="header" class="row">
-            <div id = "logo" class="col-1">
-                <div id="rond1" onclick="accueil()">
-                    <img src="img/glouUprogne.png" id="im_rond">
-                </div>
-            </div>
-            <div id = "apropos" class="col-2">
-                <button onclick="aPropos()" id="Apropos">A propos</button>
-            </div>
-            <div id = "deconnexion" class="col-3">
-                <button onclick="deconnexion()" id="deco">
-                <i id=" turnoff" class="bi bi-power">Déconnexion</i> 
-                </button>
-            </div>
-            <div id = "isen" class="col-4"><img src="img/ISEN-logo-blanc.png"  id="logo_isen"></div>
-        </header>
-
+    <body class="backgroundColor">
+        <include src="header.html"></include>
         <div id="page" >
 
             <br>
@@ -53,7 +36,7 @@
             <div id="infosPatient">
                 <p id="birth"> Date de naissance : 02/04/1944 </p>  
                 <p id="weight"> Poids: 70kg </p> 
-                <button onclick="modifProfil()" type="button" id="modifPatient" class="position-relative start-45 btn btn-light mb-2"><i id="bouton_modif" class="bi bi-person-gear"></i></button>
+                <button type="button" id="modifPatient" class="position-relative start-45 btn btn-light mb-2"><a href="modifUtilisateur.html"><i id="bouton_modif" class="bi bi-person-gear"></i></a></button>
                 <br>             
                 <p id="Age"> Age: 77 ans </p>  
                 <p id="Aim"> Quantite d'eau a boire: 2L/jours </p>
@@ -101,137 +84,10 @@
                 </div>
             </div>
         </div>
-
-        <div id="info_utilisateur" class="display">
-            <div>
-                <p class="infoUtil">INFORMATIONS UTILISATEUR</p>
-            </div>
-            <div class="changeUtil" >
-                <div class="changeTextUtil">
-                    <div id="civilite" class="padding">
-                        CIVILITE
-                        <input type="radio" id="madame" name="drone" value="madame"><label for="madame">Madame</label>
-                        <input type="radio" id="monsieur" name="drone" value="monsieur"><label for="monsieur">Monsieur</label>
-                    </div>
-                    <div class="padding form">
-                        <label for="name">NOM</label>
-                        <input placeholder="DOE" type="text" name="name" id="nameModif" required>
-                    </div>
-                    <div class="padding form">
-                        <label for="surname">PRENOM</label>
-                        <input placeholder="Jane" type="text" name="surname" id="surnameModif" required>
-                    </div>
-                    <div class="padding form">
-                        <label for="ddn">DATE DE NAISSANCE</label>
-                        <input type="date" name="ddn" id="ddnModif" required>
-                    </div>
-                    <div class="padding form">
-                        <label for="weight">POIDS</label>
-                        <input placeholder="XX" type="text" name="weight" id="weightModif" required>
-                        <i>kg</i>
-                    </div>
-                    <div class="padding form">
-                        <label for="quantity">QUANTITE D'EAU A BOIRE</label>
-                        <input placeholder="XX" type="text" name="quantity" id="quantityModif" required>
-                        <i>L</i>
-                    </div>
-                    <div  id="valid_btn" class="padding">
-                        <button onclick="validProfil()" id="validInfo" class="validInfo">Valider</button>
-                        <button onclick="cancelProfil()" id="cancelInfo" class="validInfo">Annuler</button>
-                    </div>
-                </div>
-            </div> 
-        </div>
-
-        <div id="AproposModale" class="display">
-            <h1 class="TitleAPropos"> A PROPOS </h1>
-            <div class="TitleProject" >
-                <p class="TitleText"><strong> Le projet </strong></p>
-            </div>
-            <div class= "mainText">
-                <p>La déshydratation est un problème récurrent, particulièrement chez les personnes âgées. En effet, la sensation de soif diminue avec l’âge.  </p>
-                <p><strong> Glou Up</strong>,  c’est un projet réalisé par un groupe d’étudiants en dernière année à l’ISEN Brest. </p>
-                <p><strong> Le but ? </strong>    Les problèmes liés à la déshydratation sont nombreux et peuvent s’avérer grave chez les patients les plus âgés. Plusieurs facteurs en sont la cause : maladies, médicaments, diminution de la soif, ... </p>
-                <p>Notre objectif est de soulager l’entourage, notamment le personnel soignant, dans le suivi de l’hydratation des patients et éviter des passages réguliers. Ce verre pourrait être particulièrement pratique en temps de canicule, et permettrait également de rassurer les proches des patients quant à ce phénomène. </p>
-                <p><strong> Le concept ? </strong>     Un verre posé sur un socle qui mesure la quantité d’eau bue. Le dispositif est connecté à une application Web, qui va permettre de visualiser la quantité d’eau à boire par jour, calculée de façon personnalisée pour chaque utilisateur du Glou Up, ainsi que la quantité d’eau bue.</p>
-            </div>
-            <div class="TitleTeam">
-                <p class="TitleText"><strong> L'équipe </strong></p>
-            </div>
-            <div class="TextTeam">
-                <p>L’équipe Glou Up, ce sont 25 étudiants dans le domaine professionnel Technologies Médicales et Santé,  accompagnés par leur professeur responsable  M. Thibault Napoléon.</p>
-            </div>
-            <br>
-            <div class="Pictures">
-                <div class="Team1"> 
-                    <img src="equipe.jpg" width="175px" height="160px" >
-                    <div class="TeamDesign"><p class="TextTeamDesign"><strong>L'équipe "Design"</strong></p></div>
-                </div>
-                <div class="Team2">
-                    <img src="equipe.jpg" width="175px" height="160px" >
-                    <div class="TeamHardware"><p class="TextTeamHardware"><strong>L'équipe "Hardware"</strong></p></div>
-                </div>
-                <div class="Team3">
-                    <img src="equipe.jpg" width="175px" height="160px">
-                    <div class="TeamGestion"><p class="TextTeamGestion"><strong>L'équipe "Gestion"</strong></p></div>
-                </div>
-                <div class="Team4">
-                    <img src="equipe.jpg" width="175px" height="160px" > 
-                    <div class="TeamSoftware"><p class="TextTeamSoftware"><strong>L'équipe "Software"</strong></p></div>
-                </div>
-            </div>
-        </div>
+        <br>
+        <br>
+        <include src="footer.html"></include>
 
     </body>
-    <br>
-    <br>
-
-    <footer id="footer" class="background">
-
-        <div class="ligne1" id="ligne1">
-            <div class="colonne1" id="blockrond">
-                    <div id="rond_footer" class="box_bis1">
-                        <img src="img/glouUprogne.png" id="im_rond">
-                    </div>
-            </div>
-            <div class="colonne2">
-                <div class="box1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-geo-alt" viewBox="0 0 16 16">
-                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                    </svg>
-                    <span id="adress">
-                    20 rue Cuirasse Bretagne
-                    </span>
-                </div>
-    
-                <div class="box1">
-                    <span id="cp">
-                        29200 BREST
-                    </span>
-                </div>
-                <div class="box1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-telephone" viewBox="0 0 16 16">
-                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                    </svg>
-                    <span id="tel">
-                        Tel : 02.98.03.84.00
-                    </span>
-                </div>
-            </div>
-        </div>
-        <div class="ligne2">
-            <div class="box2">
-                <p id="year">
-                    <a>&copy; 2022</a>
-                </p>
-            </div>
-        </div>
-  
-    </footer>
 
 </html>
-    
-
-        
-    

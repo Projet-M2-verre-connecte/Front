@@ -1,4 +1,5 @@
-.background{
+.background1
+{
     background-color: #3A6BB7;
     text-align: center;
 }
@@ -7,8 +8,7 @@
     display:flex; 
     justify-content:center
 }
-
-#rond{
+#rond_dec{
     margin: auto; 
     height:200px; 
     width: 200px; 
@@ -16,7 +16,7 @@
     clip-path:ellipse(50% 50%);
 }
 
-#rond2{
+#rond2_dec{
     height:100%;
 }
 
